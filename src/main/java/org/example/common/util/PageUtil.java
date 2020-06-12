@@ -9,4 +9,11 @@ public class PageUtil {
 
     }
 
+    public static String getNotificationText(boolean closeNotification) {
+
+    }
+
+    public static void waitForLoadingIndicator() {
+
+    }
 }

@@ -42,5 +42,4 @@ public abstract class BasePage {
 
         return PageUtil.getPage(clazz);
     }
-
 }
