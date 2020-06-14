@@ -32,7 +32,7 @@ public class SysBaseTest {
 
         String url = PropertySupplier.getSYSUrl();
         String userLogin = PropertySupplier.getSYSUserLogin();
-        String userPass = PropertySupplier.getDBUserPassword();
+        String userPass = PropertySupplier.getSYSUserPassword();
 
         mainWebPage = loginWebPage.login(url, userLogin, userPass);
     }
@@ -42,7 +42,7 @@ public class SysBaseTest {
         try {
             log.info("Tear down after suite test");
             mainWebPage.logout();
-            log.info("Tear down after suite succesed");
+            log.info("Tear down after suite successed");
         } catch (Exception e) {
 
             log.error("Tear down after suite failed: " + e.getLocalizedMessage());
@@ -71,6 +71,4 @@ public class SysBaseTest {
             service.shutdown();
         }
     }
-
-
 }

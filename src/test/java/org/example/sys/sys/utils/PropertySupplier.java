@@ -49,7 +49,7 @@ public class PropertySupplier {
     }
 
     public static boolean runHeadless() {
-        return readProperty("run.headless").equals("true");
+        return false; // readProperty("run.headless").equals("true");
     }
 
     // todo grid property
@@ -125,7 +125,7 @@ public class PropertySupplier {
     }
 
     public static boolean useGrid() {
-        return readProperty("grid.enabled").equals("true");
+        return false; // readProperty("grid.enabled").equals("true");
     }
 
     public static boolean forceLocalNode() {

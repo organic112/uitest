@@ -14,16 +14,17 @@ public class LoginWebPage extends BaseWebPage {
 
     @Override
     public void waitForPage() {
-        getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".v-window-header")));
+        //getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".v-window-header")));
+        getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("loginLayout")));
     }
 
     public MainWebPage login(String url, String user, String pwd){
 
         getDriver().get(url);
 
-        WebElement userLoginElement = getDriver().findElement(By.cssSelector("#loginField"));
-        WebElement userPasswordElement = getDriver().findElement(By.cssSelector("#passwordField"));
-        WebElement loginButtonElement = getDriver().findElement(By.cssSelector("#loginButton"));
+        WebElement userLoginElement = getDriver().findElement(By.cssSelector("#vaadinLoginUsername"));
+        WebElement userPasswordElement = getDriver().findElement(By.cssSelector("#vaadinLoginPassword"));
+        WebElement loginButtonElement = getDriver().findElement(By.xpath(".//*[@part='vaadin-login-submit' and text()='Login']")); // TODO selector by Xpath
 
         userLoginElement.sendKeys(user);
         userPasswordElement.sendKeys(pwd);
