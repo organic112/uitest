@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public abstract class BaseWebPage {
 
-    private static final int DEFAULT_TIMEOUT = 60;
+    private static final int DEFAULT_TIMEOUT = 10;
     private static WebDriver driver;
     private static WebDriverWait wait;
 

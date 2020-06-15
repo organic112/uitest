@@ -49,7 +49,7 @@ public abstract class SYSWebPage extends BaseWebPage {
 
     public LoginWebPage logout() {
 
-        getButton(() -> "Logout").click();
+        getButton(() -> "LOGOUT").click();
         return getPage(LoginWebPage.class);
     }
 

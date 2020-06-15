@@ -16,7 +16,6 @@ import java.util.concurrent.*;
 @Slf4j
 public class SysBaseTest {
 
-
     private static MainWebPage mainWebPage;
     private AdministrationHelper administrationHelper;
 
